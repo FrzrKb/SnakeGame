@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <title>Snake Game</title>
+    <!-- የ Favicon ኮድ (ከኢንተርኔት) -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/528/528105.png" type="image/png">
+    <link rel="stylesheet" href="/CSS/StyleSnake.css" />
+  </head>
+  <body>
+    <h1>The Snake Game</h1>
+
+    <div id="scoreBoard">Result: 0 | High Score: 0</div>
+
+    <div class="canvas-container">
+      <canvas class="canvas" width="400" height="400"></canvas>
+    </div>
+
+    <div class="controls-container">
+      <button onclick="changeSpeed(150)">Easy</button>
+      <button onclick="changeSpeed(100)">Medium</button>
+      <button onclick="changeSpeed(50)">Hard</button>
+    </div>
+
+    <div class="mobile-controls">
+      <button
+        class="control-btn"
+        ontouchstart="handleButtonClick('up')"
+        onclick="handleButtonClick('up')"
+      >
+        ▲
+      </button>
+
+      <div class="middle-row">
+        <button
+          class="control-btn"
+          ontouchstart="handleButtonClick('left')"
+          onclick="handleButtonClick('left')"
+        >
+          ◀
+        </button>
+
+        <button
+          class="control-btn"
+          ontouchstart="handleButtonClick('down')"
+          onclick="handleButtonClick('down')"
+        >
+          ▼
+        </button>
+
+        <button
+          class="control-btn"
+          ontouchstart="handleButtonClick('right')"
+          onclick="handleButtonClick('right')"
+        >
+          ▶
+        </button>
+      </div>
+    </div>
+
+    <h4 class="footer-name">Powered By Frezer</h4>
+
+    <script src="/JS/JsSnake.js"></script>
+  </body>
+</html>
